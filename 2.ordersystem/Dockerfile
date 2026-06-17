@@ -20,4 +20,4 @@ WORKDIR /app
 COPY --from=stage1 /app/build/libs/*.jar app.jar
 
 # 실행
-ENTRYPOINT ["java", "-jar", "app.jar"]dkco
+ENTRYPOINT ["java", "-jar", "app.jar"]
