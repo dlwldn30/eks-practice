@@ -1,5 +1,5 @@
 # 필요프로그램 설치
-FROM eclipse-temurin:17-jdk AS stage1
+FROM eclipse-temurin:17-jdk-alpine AS stage1
 
 # 파일 복사
 WORKDIR /app
@@ -20,4 +20,4 @@ WORKDIR /app
 COPY --from=stage1 /app/build/libs/*.jar app.jar
 
 # 실행
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]dkco
